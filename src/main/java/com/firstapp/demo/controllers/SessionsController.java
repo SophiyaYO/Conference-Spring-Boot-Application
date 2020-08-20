@@ -15,17 +15,19 @@ public class SessionsController {
     @Autowired
     private SessionRepository sessionRepository;
 
-    @GetMapping
+    @GetMapping//tells exactly which http verb to use
+    // which will be a get verb to call this end point
     public List<Session> list() {
         return sessionRepository.findAll();
     }
 
 
-    @GetMapping
+    @GetMapping//tells exactly which http verb to use
+    // which will be a get verb to call this end point
     @RequestMapping("{id}")
     public Session get(@PathVariable Long id){
         return sessionRepository.getOne(id);
-    }
+    }//adding an additional id to the url for the GET method
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)//what I want to occur when the method executes and finishes
