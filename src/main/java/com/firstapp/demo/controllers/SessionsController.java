@@ -47,6 +47,7 @@ public class SessionsController {
 
         Session existingSession = sessionRepository.getOne(id);
         BeanUtils.copyProperties(session, existingSession, "session_id");
+        //we ignore session_id because it is pr key, because it will ad null for pk, but pk cannot be null
         return sessionRepository.saveAndFlush(existingSession);
     }
 
