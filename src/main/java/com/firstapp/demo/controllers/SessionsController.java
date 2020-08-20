@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.persistence.Lob;
 import java.util.List;
 
-@RestController//this will respond to payloads incoming and outgoing as json rest poitns
+@RestController//this will respond to payloads incoming and outgoing as json rest points
 @RequestMapping("/api/v1/sessions")//tells the routing what the mapping will look like
 public class SessionsController {
     @Autowired
