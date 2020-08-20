@@ -32,6 +32,12 @@ public class SessionsController {
         return sessionRepository.saveAndFlush(session);
     }
 
+    @RequestMapping(value = "{id}", method = RequestMethod.DELETE)
+    public void delete(@PathVariable Long id){
+        //also need to check for children records before deleting;
+        sessionRepository.deleteById(id);
+    }
+
 //    @PostMapping
 //    @ResponseStatus(HttpStatus.CREATED)//what I want to occur when the method executes and finishes
 //    public Session create(@RequestBody final Session session){
