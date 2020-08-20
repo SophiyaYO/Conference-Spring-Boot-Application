@@ -29,9 +29,9 @@ public class SessionsController {
         return sessionRepository.getOne(id);
     }//adding an additional id to the url for the GET method
 
-    @PostMapping
-    @ResponseStatus(HttpStatus.CREATED)//what I want to occur when the method executes and finishes
-    public Session create(@RequestBody final Session session){
-        return sessionRepository.saveAndFlush(session);
-    }
+//    @PostMapping
+//    @ResponseStatus(HttpStatus.CREATED)//what I want to occur when the method executes and finishes
+//    public Session create(@RequestBody final Session session){
+//        return sessionRepository.saveAndFlush(session);
+//    }
 }
