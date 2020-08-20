@@ -40,7 +40,7 @@ public class SessionsController {
     }
 
     @RequestMapping(value = "{id}", method = RequestMethod.PUT)
-    public Session update(@PathVariable long id, @RequestBody Session session) {
+    public Session update(@PathVariable Long id, @RequestBody Session session) {
         //because this is a PUT, we expect all attributes to be passed in.
         // A PATCH would only need what
         //TODO: Add validation that all attributes are passed in, otherwise return a 400 bad payload
