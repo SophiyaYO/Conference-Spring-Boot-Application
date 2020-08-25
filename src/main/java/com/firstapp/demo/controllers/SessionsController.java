@@ -21,8 +21,9 @@ public class SessionsController {
     }
 
 
-    @GetMapping//tells exactly which http verb to use
+    //tells exactly which http verb to use
     // which will be a get verb to call this end point
+    @GetMapping
     @RequestMapping("{id}")
     public Session get(@PathVariable Long id) {
         return sessionRepository.getOne(id);
